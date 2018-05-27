@@ -8,7 +8,7 @@ import { Http } from '@angular/http';
   styleUrls: ['./value.component.css']
 })
 export class ValueComponent implements OnInit {
-  values:any;HttpHttpHtHHttpHHttp
+  values:any;
   constructor(private http: Http) { }
 
   ngOnInit() {
