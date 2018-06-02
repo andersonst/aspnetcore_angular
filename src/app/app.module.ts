@@ -9,6 +9,10 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { AlertifyService } from './_services/alertify.service';
+import { BsDropdownModule } from 'ngx-bootstrap';
+import { setTheme } from 'ngx-bootstrap/utils';
+
 
 
 @NgModule({
@@ -17,17 +21,22 @@ import { RegisterComponent } from './register/register.component';
     //ValueComponent,
     NavComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+   
 ],
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [
       AuthService,
+      AlertifyService,
 
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { constructor(){
+  setTheme('bs3'); 
+} }
